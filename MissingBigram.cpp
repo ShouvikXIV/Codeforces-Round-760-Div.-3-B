@@ -17,7 +17,6 @@ int main()
 	{
 		int n;
 		cin>>n;
-		// cin.ignore();
 		std::vector<string> v;
 		for(int j = 0;j<n-2;j++)
 		{
@@ -25,12 +24,6 @@ int main()
 			cin>>c;
 			v.push_back(c);
 		}
-		// for(string elements:v)
-		// {
-		// 	cout<<elements<<' ';
-		// }
-
-
 		int l = 1;
 		string str = "";
 		str+=v[0];
@@ -54,7 +47,6 @@ int main()
 				{
 					str+="ba";
 				}
-				// l+=1;
 			}
 			else if(v[f-1]=="ab")
 			{
@@ -74,7 +66,6 @@ int main()
 				{
 					str+="a";
 				}
-				// l+=1;
 			}
 			else if(v[f-1]=="aa")
 			{
@@ -94,7 +85,6 @@ int main()
 				{
 					str+="ba";
 				}
-				// l+=1;
 			}
 			else if(v[f-1]=="bb")
 			{
@@ -114,48 +104,14 @@ int main()
 				{
 					str+="a";
 				}
-				// l+=1;
 			}
-			l+=1;
 
 		}
-		// if(l>n-1)
-		// {
-		// 	if(v[n-3]=="aa")
-		// 	{
-		// 		str+="a";
-		// 	}
-		// 	else if(v[n-3]=="ab")
-		// 	{
-		// 		str+="b";
-		// 	}
-		// 	else if(v[n-3]=="ba")
-		// 	{
-		// 		str+="a";
-		// 	}
-		// 	else if(v[n-3]=="bb")
-		// 	{
-		// 		str+="b";
-		// 	}
-		// }
-		// for(int p = 0;p<n;p++)
-		// {
-		// 	cout<<str[p]<<' ';
-		// }
-		// cout<<'\n';
 		if(str.length()<n)
 		{
 			str+=str[n-2];
 		}
-		// cout<<str[n-2]<<' ';
 		cout<<str<<'\n';
 	}
-
-
-
-
-
-
-
 	return 0;
 }
